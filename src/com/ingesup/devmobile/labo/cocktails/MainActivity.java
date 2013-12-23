@@ -31,32 +31,45 @@ public class MainActivity extends Activity implements OnClickListener {
         DatabaseManager.getInstance().init(this);
         insertInDatabaseFirstTime();
         
-        // Ici on récupère tous les boutons
+        // Ici on rï¿½cupï¿½re tous les boutons
         buttonElisa = (Button) findViewById(R.id.button1);
         buttonNicolas = (Button) findViewById(R.id.button2);
         buttonPA = (Button) findViewById(R.id.button3);
      
-        // La on enregistre le clic sur le bouton (et on définit leur action dans la méthode onClick() en dessous)
+        // La on enregistre le clic sur le bouton (et on dï¿½finit leur action dans la mï¿½thode onClick() en dessous)
         buttonElisa.setOnClickListener(this);
         buttonNicolas.setOnClickListener(this);
         buttonPA.setOnClickListener(this);
         
         // BASE DE DONNEES 
-        // 1. On récupère la liste de tous les cocktails
+        // 1. On rï¿½cupï¿½re la liste de tous les cocktails
         List<Cocktail> allCocktails = DatabaseManager.getInstance().getAllCocktails();
-        // Ici on l'affiche avec une bête boucle for
+        // Ici on l'affiche avec une bï¿½te boucle for
         Log.d("TAG", "--------------- LISTE DES COCKTAILS ---------------------");
         for(int i=0; i<allCocktails.size(); i++) {
         	Log.d("TAG", allCocktails.get(i).toString());
         }
         
-        // 2. On récupère la liste de tous les ingrédients
+        // 2. On rï¿½cupï¿½re la liste de tous les ingrï¿½dients
         List<Ingredient> allIngredients = DatabaseManager.getInstance().getAllIngredients();
-        // Ici on l'affiche avec une bête boucle for
+        // Ici on l'affiche avec une bï¿½te boucle for
         Log.d("TAG", "--------------- LISTE DES INGREDIENTS ---------------------");
         for(int i=0; i<allIngredients.size(); i++) {
         	Log.d("TAG", allIngredients.get(i).toString());
         }
+        
+        // 3. On regarde si un ingrÃ©dient est dans le bar ou pas, et on le met Ã  jour
+        Ingredient anIngredient = allIngredients.get(0);
+        // La on regarde si l'ingrÃ©dient est dans le bar...
+        boolean isInBar = anIngredient.isInBar();
+        Log.d("TAG", "L'ingrÃ©dient " + anIngredient.toString() + (isInBar ? " est dans le bar" : " n'est pas dans le bar"));
+        // Ici on le change : si il Ã©tait dans le bar on l'enlÃ¨ve du bar, sinon on l'y ajoute
+        DatabaseManager.getInstance().updateIngredientInBar(anIngredient, !isInBar);
+        // Et pour le test, on rÃ© affiche l'ingrÃ©dient, normalement changÃ©...
+        isInBar = anIngredient.isInBar();
+        Log.d("TAG", "L'ingrÃ©dient " + anIngredient.toString() + (isInBar ? " est dans le bar" : " n'est pas dans le bar"));
+        // Pour finir, on remet l'ingrÃ©dient Ã  sa valeur initiale vu que c'Ã©tait juste un test...
+        DatabaseManager.getInstance().updateIngredientInBar(anIngredient, !isInBar);
     }
 
 

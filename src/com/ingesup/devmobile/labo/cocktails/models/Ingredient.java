@@ -1,10 +1,13 @@
 package com.ingesup.devmobile.labo.cocktails.models;
 
+import com.ingesup.devmobile.labo.cocktails.database.DatabaseManager;
+
 
 public class Ingredient {
 	private int _id;
 	private String nom;
 	private int image;
+	private boolean isInBar = false;
 	
 	public Ingredient() {
 		
@@ -31,6 +34,15 @@ public class Ingredient {
 	}
 	public void setImage(int image) {
 		this.image = image;
+	}
+	
+	public boolean isInBar() {
+		isInBar = DatabaseManager.getInstance().isInBar(this);
+		return isInBar;
+	}
+	
+	public void setIsInBar(boolean isInBar) {
+		this.isInBar = isInBar;
 	}
 	
 	@Override
