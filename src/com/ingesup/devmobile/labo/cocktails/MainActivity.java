@@ -31,28 +31,28 @@ public class MainActivity extends Activity implements OnClickListener {
         DatabaseManager.getInstance().init(this);
         insertInDatabaseFirstTime();
         
-        // Ici on r�cup�re tous les boutons
+        // Ici on récupère tous les boutons
         buttonElisa = (Button) findViewById(R.id.button1);
         buttonNicolas = (Button) findViewById(R.id.button2);
         buttonPA = (Button) findViewById(R.id.button3);
      
-        // La on enregistre le clic sur le bouton (et on d�finit leur action dans la m�thode onClick() en dessous)
+        // La on enregistre le clic sur le bouton (et on définit leur action dans la méthode onClick() en dessous)
         buttonElisa.setOnClickListener(this);
         buttonNicolas.setOnClickListener(this);
         buttonPA.setOnClickListener(this);
         
         // BASE DE DONNEES 
-        // 1. On r�cup�re la liste de tous les cocktails
+        // 1. On récupère la liste de tous les cocktails
         List<Cocktail> allCocktails = DatabaseManager.getInstance().getAllCocktails();
-        // Ici on l'affiche avec une b�te boucle for
+        // Ici on l'affiche avec une bête boucle for
         Log.d("TAG", "--------------- LISTE DES COCKTAILS ---------------------");
         for(int i=0; i<allCocktails.size(); i++) {
         	Log.d("TAG", allCocktails.get(i).toString());
         }
         
-        // 2. On r�cup�re la liste de tous les ingr�dients
+        // 2. On récupère la liste de tous les ingrédients
         List<Ingredient> allIngredients = DatabaseManager.getInstance().getAllIngredients();
-        // Ici on l'affiche avec une b�te boucle for
+        // Ici on l'affiche avec une bête boucle for
         Log.d("TAG", "--------------- LISTE DES INGREDIENTS ---------------------");
         for(int i=0; i<allIngredients.size(); i++) {
         	Log.d("TAG", allIngredients.get(i).toString());
