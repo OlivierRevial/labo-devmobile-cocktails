@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ingesup.devmobile.labo.cocktails.R;
+import com.ingesup.devmobile.labo.cocktails.database.DatabaseManager;
 import com.ingesup.devmobile.labo.cocktails.models.Ingredient;
 
 public class IngredientAdapter extends ArrayAdapter<Ingredient> implements OnClickListener {
@@ -33,7 +34,9 @@ public class IngredientAdapter extends ArrayAdapter<Ingredient> implements OnCli
         ImageView ImgIngredient;
         TextView NomIngredient;
     }
-	boolean test = true;
+	Ingredient anIngredient = allIngredients.get(0);
+	boolean isInBar = anIngredient.isInBar();
+	
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
@@ -57,12 +60,14 @@ public class IngredientAdapter extends ArrayAdapter<Ingredient> implements OnCli
 	public void onClick(View v) {
 		TextView nomIngredient = (TextView) v;
 		
-		if (test) {
-			nomIngredient.setTextColor(Color.RED);
-			test = false;
-		} else {
+		if (isInBar) {
 			nomIngredient.setTextColor(Color.GREEN);
-			test = true;
+			DatabaseManager.getInstance().updateIngredientInBar(anIngredient, isInBar);
+			isInBar = anIngredient.isInBar();
+		} else {
+			nomIngredient.setTextColor(Color.RED);
+			DatabaseManager.getInstance().updateIngredientInBar(anIngredient, !isInBar);
+			isInBar = anIngredient.isInBar();
 		}
 		
 	}

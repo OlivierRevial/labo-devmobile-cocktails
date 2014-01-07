@@ -19,5 +19,4 @@ public class MainActivityPierreAntoine extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-    
 }
