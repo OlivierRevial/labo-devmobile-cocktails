@@ -114,6 +114,25 @@ public class DatabaseManager {
 		return ingredients;
 	}
 	
+	public boolean isInBar(Ingredient ingredient) {
+		SQLiteDatabase db = cocktailsOpenHelper.getReadableDatabase();
+		Cursor cursor = db.query(IngredientTable.TABLE_NAME, null, 
+				IngredientTable._ID + " = " + ingredient.getId() + " AND " 
+				+ IngredientTable.COLUMN_IS_IN_BAR + " = 1", null, null, null, null);
+		int count = cursor.getCount();
+		db.close();
+		
+		return count != 0;
+	}
+	
+	public void updateIngredientInBar(Ingredient ingredient, boolean isInBar) {
+		SQLiteDatabase db = cocktailsOpenHelper.getWritableDatabase();
+		ContentValues cv = new ContentValues();
+		cv.put(IngredientTable.COLUMN_IS_IN_BAR, isInBar ? 1 : 0);
+		db.update(IngredientTable.TABLE_NAME, cv, IngredientTable._ID + " = " + ingredient.getId(), null);
+		ingredient.setIsInBar(isInBar);
+	}
+	
 	public void insertCocktail(Cocktail cocktail) {
 		ContentValues cv = new ContentValues();
 		cv.put(CocktailTable.COLUMN_NAME, cocktail.getNom());
@@ -166,22 +185,6 @@ public class DatabaseManager {
 		db.close();
 		
 		return rowId;
-	}
-	
-	private int updateRow(String table, ContentValues cv, String whereClause, String[] whereArgs) {
-		SQLiteDatabase db = cocktailsOpenHelper.getWritableDatabase();
-		int nbRowsUpdated = db.update(table, cv, whereClause, whereArgs);
-		db.close();
-		
-		return nbRowsUpdated;
-	}
-	
-	private int deleteRows(String table, String whereClause, String[] whereArgs) {
-		SQLiteDatabase db = cocktailsOpenHelper.getWritableDatabase();
-		int nbDeleted = db.delete(table, whereClause, whereArgs);
-		db.close();
-		
-		return nbDeleted;
 	}
 	
 	private String getQueryWithArgs(String baseQuery, String[] args) {
