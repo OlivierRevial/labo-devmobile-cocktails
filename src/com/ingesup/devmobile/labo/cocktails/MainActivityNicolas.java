@@ -1,23 +1,34 @@
 package com.ingesup.devmobile.labo.cocktails;
 
-import android.os.Bundle;
+import java.util.List;
+
 import android.app.Activity;
-import android.view.Menu;
+import android.os.Bundle;
+import android.view.View.OnClickListener;
+import android.widget.ListView;
+
+import com.ingesup.devmobile.labo.cocktails.adapters.IngredientAdapter;
+import com.ingesup.devmobile.labo.cocktails.database.DatabaseManager;
+import com.ingesup.devmobile.labo.cocktails.models.Ingredient;
 
 public class MainActivityNicolas extends Activity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_nicolas);
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-    
+	 ListView list;
+	 
+	 @Override
+	 public void onCreate(Bundle savedInstanceState){
+		 super.onCreate(savedInstanceState);
+		 setContentView(R.layout.activity_main_nicolas);
+	 
+		 list = (ListView)findViewById(R.id.IngredientListView);
+		 List<Ingredient> allIngredients = DatabaseManager.getInstance().getAllIngredients();
+		 IngredientAdapter adapter = new IngredientAdapter(this, R.layout.cellule_ingredient, allIngredients);
+		 
+		 	 
+		 list.setAdapter(adapter);
+			
+		 
+	 }
+	 
 }
+        

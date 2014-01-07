@@ -50,16 +50,18 @@ public class CocktailsOpenHelper extends SQLiteOpenHelper{
 
         public static final String 	_ID 					= "_id";
         public static final String 	COLUMN_NAME				= "name";
+        public static final String 	COLUMN_IS_IN_BAR 		= "is_in_bar";
         
         public static final String TABLE_CREATE = 
         		"CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " ("
                 + IngredientTable._ID 							+ " INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + IngredientTable.COLUMN_NAME					+ " INTEGER"
+                + IngredientTable.COLUMN_NAME					+ " INTEGER,"
+                + IngredientTable.COLUMN_IS_IN_BAR				+ " INTEGER DEFAULT 0"
                 + ");";
 	}
 	
 	public static final class CocktailsIngredientsTable {
-        public static final String TABLE_NAME 			= "fold_cards";
+        public static final String TABLE_NAME 			= "cocktails_ingredients";
         public static final String DEFAULT_SORT_ORDER 	= "_id ASC";
 
         public static final String 	_ID 					= "_id";
