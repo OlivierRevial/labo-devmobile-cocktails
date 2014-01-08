@@ -32,16 +32,18 @@ public final class R {
         public static final int cocktail_banana_colada=0x7f020008;
         public static final int cocktail_bellini=0x7f020009;
         public static final int cocktail_default=0x7f02000a;
-        public static final int ic_launcher=0x7f02000b;
-        public static final int ingredient_bananes=0x7f02000c;
-        public static final int ingredient_benedictine=0x7f02000d;
-        public static final int ingredient_boisson_energisante=0x7f02000e;
-        public static final int ingredient_bourbon=0x7f02000f;
-        public static final int ingredient_brandy=0x7f020010;
-        public static final int ingredient_calvados=0x7f020011;
-        public static final int ingredient_campari=0x7f020012;
-        public static final int ingredient_default=0x7f020013;
-        public static final int perroquet=0x7f020014;
+        public static final int fond_cocktail=0x7f02000b;
+        public static final int home_header_bg=0x7f02000c;
+        public static final int ic_launcher=0x7f02000d;
+        public static final int ingredient_bananes=0x7f02000e;
+        public static final int ingredient_benedictine=0x7f02000f;
+        public static final int ingredient_boisson_energisante=0x7f020010;
+        public static final int ingredient_bourbon=0x7f020011;
+        public static final int ingredient_brandy=0x7f020012;
+        public static final int ingredient_calvados=0x7f020013;
+        public static final int ingredient_campari=0x7f020014;
+        public static final int ingredient_default=0x7f020015;
+        public static final int perroquet=0x7f020016;
     }
     public static final class id {
         public static final int ImageView01=0x7f080003;
