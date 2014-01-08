@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
+    android:background="@drawable/cell_bg"
 >
     		
 
@@ -18,7 +19,7 @@
      <TextView
         android:id="@+id/tvnomCocktails"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:gravity="center_vertical"
         android:textStyle="bold"
         android:textSize="12sp"
@@ -30,7 +31,7 @@
     	android:layout_width="fill_parent"
     	android:layout_height="50dp"
         android:textSize="12sp"
-        android:textColor="#34C924"
+        android:textColor="#000000"
         android:gravity="right"
 
 />
