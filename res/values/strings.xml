@@ -4,5 +4,9 @@
     <string name="app_name">LaboCocktails</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="go_elisa">go elisa</string>
+    <string name="go_pierreantoine">go pierre antoine</string>
+    <string name="go_nicolas">go nicolas</string>
 
 </resources>
+ 

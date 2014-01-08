@@ -15,7 +15,7 @@
         android:layout_below="@+id/button1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="47dp"
-        android:text="Go Nicolas" />
+        android:text="go nicolas"/>
 
     <Button
         android:id="@+id/button1"
@@ -24,7 +24,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="76dp"
-        android:text="Go Elisa" />
+        android:text="go elisa"/>
 
     <Button
         android:id="@+id/button3"
@@ -33,6 +33,6 @@
         android:layout_below="@+id/button2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="68dp"
-        android:text="Go Pierre-Antoine" />
+        android:text="go pierreantoine"/>
 
 </RelativeLayout>

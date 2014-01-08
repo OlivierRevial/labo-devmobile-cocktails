@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.ingesup.devmobile.labo.cocktails.R;
 import com.ingesup.devmobile.labo.cocktails.models.Ingredient;
 
+@SuppressWarnings("unused")
 public class IngredientAdapter extends ArrayAdapter<Ingredient> implements OnClickListener {
 
 	private int resource;

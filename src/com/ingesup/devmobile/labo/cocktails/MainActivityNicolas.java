@@ -4,7 +4,6 @@ import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View.OnClickListener;
 import android.widget.ListView;
 
 import com.ingesup.devmobile.labo.cocktails.adapters.IngredientAdapter;
