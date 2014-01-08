@@ -1,10 +1,6 @@
 package com.ingesup.devmobile.labo.cocktails.models;
 
-<<<<<<< Updated upstream
 import com.ingesup.devmobile.labo.cocktails.database.DatabaseManager;
-=======
-import android.widget.ArrayAdapter;
->>>>>>> Stashed changes
 
 
 public class Ingredient {
