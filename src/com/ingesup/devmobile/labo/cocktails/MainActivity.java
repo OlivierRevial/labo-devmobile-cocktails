@@ -11,7 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.ingesup.devmobile.labo.cocktails.database.DatabaseManager;
 import com.ingesup.devmobile.labo.cocktails.models.Cocktail;
@@ -19,10 +19,9 @@ import com.ingesup.devmobile.labo.cocktails.models.Ingredient;
 
 public class MainActivity extends Activity implements OnClickListener {
 
-    private Button buttonElisa;
-	private Button buttonNicolas;
-	private Button buttonPA;
-
+	private LinearLayout llIngredients;
+	private LinearLayout llCocktails;
+	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,14 +31,12 @@ public class MainActivity extends Activity implements OnClickListener {
         insertInDatabaseFirstTime();
         
         // Ici on récupère tous les boutons
-        buttonElisa = (Button) findViewById(R.id.button1);
-        buttonNicolas = (Button) findViewById(R.id.button2);
-        buttonPA = (Button) findViewById(R.id.button3);
+        llIngredients = (LinearLayout) findViewById(R.id.llIngredients);
+        llCocktails = (LinearLayout) findViewById(R.id.llCocktails);
      
         // La on enregistre le clic sur le bouton (et on définit leur action dans la méthode onClick() en dessous)
-        buttonElisa.setOnClickListener(this);
-        buttonNicolas.setOnClickListener(this);
-        buttonPA.setOnClickListener(this);
+        llIngredients.setOnClickListener(this);
+        llCocktails.setOnClickListener(this);
         
         // BASE DE DONNEES 
         // 1. On récupère la liste de tous les cocktails
@@ -83,13 +80,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View arg0) {
-		if(arg0.getId() == buttonElisa.getId()) {
-			startActivity(new Intent(getApplicationContext(), MainActivityElisa.class));
-		}
-		else if(arg0.getId() == buttonNicolas.getId()) {
+		if(arg0.getId() == llIngredients.getId()) {
 			startActivity(new Intent(getApplicationContext(), MainActivityNicolas.class));
 		}
-		else if(arg0.getId() == buttonPA.getId()) {
+		else if(arg0.getId() == llCocktails.getId()) {
 			startActivity(new Intent(getApplicationContext(), MainActivityPierreAntoine.class));
 		}
 	}
