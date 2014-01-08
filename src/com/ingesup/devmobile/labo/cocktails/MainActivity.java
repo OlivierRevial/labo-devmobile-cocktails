@@ -102,6 +102,17 @@ public class MainActivity extends Activity implements OnClickListener {
 			ingredients.add(new Ingredient("Campari"));
 			ingredients.add(new Ingredient("Liqueur de framboise"));
 			ingredients.add(new Ingredient("Jus de pomme"));
+			ingredients.add(new Ingredient("Champagne"));
+			ingredients.add(new Ingredient("Chocolat"));
+			ingredients.add(new Ingredient("Cidre"));
+			ingredients.add(new Ingredient("Cognac"));
+			ingredients.add(new Ingredient("Cointreau"));
+			ingredients.add(new Ingredient("Ananas"));
+			ingredients.add(new Ingredient("Bananes"));
+			ingredients.add(new Ingredient("Cola"));
+			ingredients.add(new Ingredient("Gin"));
+			ingredients.add(new Ingredient("Lait"));
+			ingredients.add(new Ingredient("Soda"));
 			List<Cocktail> cocktails = new ArrayList<Cocktail>();
 			cocktails.add(new Cocktail("Absolut raspberri", "La recette du absolut raspberri", 2, getRandomIngredients(ingredients)));
 			cocktails.add(new Cocktail("Adios motherfucker", "La recette de l'adios motherfucker", 2, getRandomIngredients(ingredients)));
@@ -109,9 +120,23 @@ public class MainActivity extends Activity implements OnClickListener {
 			cocktails.add(new Cocktail("Apple Mojito", "La recette de l'apple mojito", 2, getRandomIngredients(ingredients)));
 			cocktails.add(new Cocktail("Appletini", "La recette de l'appletini", 1, getRandomIngredients(ingredients)));
 			cocktails.add(new Cocktail("B-52", "La recette du B-52", 2, getRandomIngredients(ingredients)));
-			cocktails.add(new Cocktail("Bahama mama", "La recette du bahama mama", 4, getRandomIngredients(ingredients)));
-			cocktails.add(new Cocktail("Bahama Colada", "La recette du bahama colada", 3, getRandomIngredients(ingredients)));
-			cocktails.add(new Cocktail("Bellini", "La recette du bellini", 5, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("B-53", "La recette du B-53", 3, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("B-54", "La recette du B-54", 4, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("Bloody Mary", "La recette du bloody Mary", 5, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("Bronx", "La recette du bronx", 3, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("Bahama Mama", "La recette du Bahama Mama", 2, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("Banana Colada", "La recette du Banana Colada", 3, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("Bellini", "La recette du Bellini", 4, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("Chocolate Martini", "La recette du Chocolate Martini", 5, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("Bronx", "La recette du bronx", 3, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("Cosmopolitan", "La recette du Cosmopolitan", 1, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("Cranberry Collins", "La recette du Cranberry Collins", 3, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("Cuba Libre", "La recette du Cuba Libre", 2, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("Cucumber Cocktail", "La recette du Cucumber Cocktail", 5, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("Cucumber GT", "La recette du Cucumber GT", 1, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("Daiquiri glace à la framboise", "La recette du Daiquiri glace à la framboise", 3, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("Daiquiri glace à la mure", "La recette du Daiquiri glace à la mure", 2, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("Daiquiri Glace", "La recette du Daiquiri Glace", 4, getRandomIngredients(ingredients)));
 			
 			for(Cocktail cocktail : cocktails) {
 				DatabaseManager.getInstance().insertCocktail(cocktail);
