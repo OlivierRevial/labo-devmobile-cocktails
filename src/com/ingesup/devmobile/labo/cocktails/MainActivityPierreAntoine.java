@@ -43,8 +43,7 @@ public class MainActivityPierreAntoine extends Activity implements OnItemClickLi
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-<<<<<<< HEAD
-=======
+
 
 
 	@Override
@@ -60,7 +59,7 @@ public class MainActivityPierreAntoine extends Activity implements OnItemClickLi
 
 	}
     
->>>>>>> a6f72f032dd5e6b813c47a8d9b6f6bc15f91b8d1
+
 }
 
 
