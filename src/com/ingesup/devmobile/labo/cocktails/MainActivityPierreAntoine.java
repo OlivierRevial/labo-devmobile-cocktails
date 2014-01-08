@@ -5,13 +5,11 @@ import java.util.List;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.ingesup.devmobile.labo.cocktails.adapters.CocktailAdaptater;
 import com.ingesup.devmobile.labo.cocktails.database.DatabaseManager;
@@ -48,7 +46,6 @@ public class MainActivityPierreAntoine extends Activity implements OnItemClickLi
 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-		// TODO Auto-generated method stub
 		Intent intent = new Intent(getApplicationContext(), MainActivityElisa.class);
 		
 		intent.putExtra("idCocktail",allCocktails.get(position).getId()); 

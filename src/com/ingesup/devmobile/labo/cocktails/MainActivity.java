@@ -115,7 +115,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			
 			for(Cocktail cocktail : cocktails) {
 				DatabaseManager.getInstance().insertCocktail(cocktail);
-			}
+			} 
 		}
 	}
 	

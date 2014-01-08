@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
+<<<<<<< HEAD
     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="fill_parent"
@@ -11,6 +12,12 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/bgfiche" >
+=======
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+/>
+>>>>>>> 89e8ad56c83cf3478a6b101253aa6d613074b4a0
 
         <LinearLayout
             android:layout_width="match_parent"

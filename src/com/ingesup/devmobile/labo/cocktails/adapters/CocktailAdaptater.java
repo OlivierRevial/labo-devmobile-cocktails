@@ -20,7 +20,6 @@ public class CocktailAdaptater extends ArrayAdapter<Cocktail> {
 			 List<Cocktail> objects) {
 		super(context, resource, objects);
 		inflater = LayoutInflater.from(context); 
-		// TODO Auto-generated constructor stub
 		this.resource = resource;
 		this.bar = objects;
 		
