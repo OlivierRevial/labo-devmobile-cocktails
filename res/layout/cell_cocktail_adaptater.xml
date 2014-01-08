@@ -23,7 +23,7 @@
         android:gravity="center_vertical"
         android:textStyle="bold"
         android:textSize="12sp"
-        android:textColor="#000000"
+        android:textColor="#0080FF"
          />     
      
     <TextView
