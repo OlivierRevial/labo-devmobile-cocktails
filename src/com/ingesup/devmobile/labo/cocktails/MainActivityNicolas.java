@@ -25,7 +25,7 @@ public class MainActivityNicolas extends Activity {
 		 
 		 	 
 		 list.setAdapter(adapter);
-			
+		 
 		 
 	 }
 	 

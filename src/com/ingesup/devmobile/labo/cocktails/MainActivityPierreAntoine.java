@@ -43,6 +43,7 @@ public class MainActivityPierreAntoine extends Activity implements OnItemClickLi
     }
 
 
+
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
 		Intent intent = new Intent(getApplicationContext(), MainActivityElisa.class);
@@ -55,6 +56,7 @@ public class MainActivityPierreAntoine extends Activity implements OnItemClickLi
 
 	}
     
+
 }
 
 
