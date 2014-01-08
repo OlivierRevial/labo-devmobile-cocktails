@@ -10,23 +10,36 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:gravity="center_vertical"
+<<<<<<< HEAD
         android:layout_alignParentTop="false"
         android:layout_alignParentBottom="false"
         android:layout_marginRight="15dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"/>
+=======
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="10dp" />
+>>>>>>> 89e8ad56c83cf3478a6b101253aa6d613074b4a0
        
      <TextView android:id="@+id/NomIngredient"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:gravity="center_vertical"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
         android:textStyle="bold"
+<<<<<<< HEAD
         android:textSize="15dp"
         android:textColor="#00FF00"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="20dp" />
+=======
+        android:textSize="20sp"
+        android:textColor="#00FF00"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="50dp" />
+>>>>>>> 89e8ad56c83cf3478a6b101253aa6d613074b4a0
        
 </LinearLayout>

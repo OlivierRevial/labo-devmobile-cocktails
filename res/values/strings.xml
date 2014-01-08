@@ -4,5 +4,19 @@
     <string name="app_name">LaboCocktails</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+<<<<<<< HEAD
+    <string name="TitleCocktail">NomCocktail</string>
+    <string name="Description">description</string>
+    <string name="Ingredients">Ingredients</string>
+    <string name="listIngredients">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l\'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n\'a pas fait que survivre cinq siècles, mais s\'est aussi adapté à la bureautique informatique, sans que son contenu n\'en </string>
+    <string name="Teneur">Teneur en alcool</string>
+    <string name="Recette">Recette</string>
+    <string name="contenuRecette">Saraceni tamen nec amici nobis umquam nec hostes optandi, ultro citroque discursantes quicquid inveniri poterat momento temporis parvi vastabant milvorum rapacium similes, qui si praedam dispexerint celsius, volatu rapiunt celeri, aut nisi impetraverint, non inmorantur.Saraceni tamen nec amici nobis umquam nec hostes optandi, ultSaraceni tamen nec amici nobis umquam nec hostes optandi, ultSaraceni tamen nec amici nobis umquam nec hostes optandi, ultSaraceni tamen nec amici nobis umquam nec hostes optandi, ultSaraceni tamen nec amici nobis umquam nec hostes optandi, ultSaraceni tamen nec amici nobis umquam nec hostes optandi, ultSaraceni tamen nec amici nobis umquam nec hostes optandi, ultSaraceni tamen nec amici nobis umquam nec hostes optandi, ultSaraceni tamen nec amici nobis umquam nec hostes optandi, ultSaraceni tamen nec amici nobis umquam nec hostes optandi, ult</string>
+=======
+    <string name="go_elisa">go elisa</string>
+    <string name="go_pierreantoine">go pierre antoine</string>
+    <string name="go_nicolas">go nicolas</string>
+>>>>>>> 89e8ad56c83cf3478a6b101253aa6d613074b4a0
 
 </resources>
+ 

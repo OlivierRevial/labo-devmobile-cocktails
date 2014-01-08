@@ -105,7 +105,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			List<Cocktail> cocktails = new ArrayList<Cocktail>();
 			cocktails.add(new Cocktail("Absolut raspberri", "La recette du absolut raspberri", 2, getRandomIngredients(ingredients)));
 			cocktails.add(new Cocktail("Adios motherfucker", "La recette de l'adios motherfucker", 2, getRandomIngredients(ingredients)));
-			cocktails.add(new Cocktail("Americano", "La recette du ", 2, getRandomIngredients(ingredients)));
+			cocktails.add(new Cocktail("Americano", "La recette du americano", 2, getRandomIngredients(ingredients)));
 			cocktails.add(new Cocktail("Apple Mojito", "La recette de l'apple mojito", 2, getRandomIngredients(ingredients)));
 			cocktails.add(new Cocktail("Appletini", "La recette de l'appletini", 1, getRandomIngredients(ingredients)));
 			cocktails.add(new Cocktail("B-52", "La recette du B-52", 2, getRandomIngredients(ingredients)));
@@ -115,7 +115,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			
 			for(Cocktail cocktail : cocktails) {
 				DatabaseManager.getInstance().insertCocktail(cocktail);
-			}
+			} 
 		}
 	}
 	
