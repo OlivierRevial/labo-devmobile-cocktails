@@ -45,6 +45,7 @@ public class MainActivityPierreAntoine extends Activity implements OnItemClickLi
     }
 
 
+
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
 		// TODO Auto-generated method stub
@@ -58,6 +59,7 @@ public class MainActivityPierreAntoine extends Activity implements OnItemClickLi
 
 	}
     
+
 }
 
 

@@ -77,7 +77,7 @@ public class CocktailAdaptater extends ArrayAdapter<Cocktail> {
 	}
 	
 	
-	private class ViewHolder {
+	public class ViewHolder {
 		TextView tvnomCocktails;
 		TextView tvnoteCocktails;
 		ImageView tvimageCocktails;

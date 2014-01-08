@@ -74,6 +74,7 @@ public class DatabaseManager {
 	
 	public List<Ingredient> getAllIngredients() {
 		SQLiteDatabase db = cocktailsOpenHelper.getReadableDatabase();
+		IngredientImages images = new IngredientImages();
 		List<Ingredient> ingredients = new ArrayList<Ingredient>();
 		
 		Cursor cursor = db.query(IngredientTable.TABLE_NAME, null, null, null, null, null, null);
@@ -81,6 +82,7 @@ public class DatabaseManager {
 			Ingredient ingredient = new Ingredient();
 			ingredient.setId(cursor.getInt(cursor.getColumnIndex(IngredientTable._ID)));
 			ingredient.setNom(cursor.getString(cursor.getColumnIndex(IngredientTable.COLUMN_NAME)));
+			ingredient.setImage(images.getIngredientDrawable(ingredient.getNom()));
 			ingredients.add(ingredient);
 		}
 		
