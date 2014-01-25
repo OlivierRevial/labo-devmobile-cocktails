@@ -5,6 +5,6 @@ import android.annotation.SuppressLint;
 public class Utils {
 	@SuppressLint("DefaultLocale")
 	public static String getNormalizedString(String string) {
-		return string.toLowerCase().replaceAll(" ", "_").replaceAll("'", "_");
+		return string.toLowerCase().replace(" ", "_").replace("'", "_").replace("-", "_").replace("à", "a").replace("é", "e").replace("è", "e");
 	}
 }
